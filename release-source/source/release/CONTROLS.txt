@@ -1,0 +1,449 @@
+BLACK OPS VR v0.1.0-beta.4 â€” PATREON BETA
+CONTROLS AND GETTING STARTED
+
+These are the right-handed controls. Button names use the Touch layout:
+X/Y on the left controller and A/B on the right. Other controller layouts
+may use different names for the same primary and secondary buttons.
+
+GETTING STARTED
+
+1. Keep all files and subfolders together inside the extracted BlackOpsVR
+   folder. The included .NET files are required by the launcher.
+2. Open BlackOpsVR.exe from that extracted folder.
+3. Select your Steam installation of Call of Duty: Black Ops.
+4. Choose HMD- or controller-oriented movement, turning, reload, grenade
+   and rendering-resolution options.
+5. Click Install / Update, then Launch VR.
+
+Black Ops VR uses OpenXR. SteamVR works when it is the active 32-bit OpenXR
+runtime. COD4 VR's "OpenVR safe controls" preset is part of COD4's legacy
+OpenVR fallback and is not used here.
+
+The launcher keeps its private runtime under %LOCALAPPDATA%\BlackOpsVR.
+It copies your existing saves locally on first setup. VR progress then
+remains separate from your Steam progress; the Steam installation and
+its original saves are left untouched. Later launches keep your VR saves.
+
+Open Zombies through the Zombies entry in the single-player menu.
+Multiplayer is not supported by this beta.
+
+After loading, resuming, or recovering tracking, briefly release the
+buttons and center the sticks before pressing them again. A control held
+through a pause or tracking loss may need to be released and re-pressed.
+
+OPTIONS
+
+Rendering resolution:
+  Performance: 1280x1440 per eye (2560x1440 packed).
+  Standard, the default: 1920x2160 per eye (3840x2160 packed).
+  High: 2560x2880 per eye (5120x2880 packed).
+  Save and close the game, choose a preset, then select Install / Update
+  before launching. These are internal game rendering sizes, separate from
+  the OpenXR runtime's headset resolution. Higher settings use more GPU
+  resources; no specific frame rate is guaranteed.
+
+Movement orientation:
+  HMD oriented: pushing the left stick forward moves in the horizontal
+  direction your headset is facing. While moving, deliberate head turns
+  also turn the player body. Small head movements stay in headset tracking
+  instead of repeatedly shifting the body.
+  Controller oriented: pushing the left stick forward moves in the
+  horizontal direction the controller holding the movement stick is
+  pointing. With this release, this is the left controller.
+
+Room-scale movement:
+  During supported ordinary on-foot play, deliberate physical movement
+  makes the player body follow your headset position. Small leaning motions
+  remain available. Native movement and collision rules still apply; the
+  camera is constrained near supported solid surfaces. This is separate
+  from the HMD/controller option, which chooses the movement-stick direction.
+  Vehicles, ladders, swimming and scripted scenes retain their own controls.
+  Tracking jumps reset the horizontal tracking baseline rather than asking
+  the character to walk that distance. No extra button is required.
+
+Turning:
+  Snap: right stick left/right turns in 45-degree steps. Center the stick
+  between steps.
+  Smooth: right stick left/right turns continuously at up to 90 degrees
+  per second.
+
+Reloading:
+  Manual: use the physical reload sequence below.
+  Automatic/native: A performs the game's normal button reload, and the
+  game can reload an empty weapon automatically. Scripted reload locks
+  still apply. This mode also leaves normal cycling/charging to the game.
+
+Grenades:
+  Motion is the default: grab at a hip, move your hand, and release.
+  Buttons: with left grip released, press the left trigger anywhere to
+  prepare a frag. For a tactical grenade, hold left-stick click before
+  pressing the left trigger. Hold the trigger to retain/cook, then release
+  to throw in your headset direction. Native grenade behavior and available
+  ammo apply.
+
+ON FOOT
+
+Control                         Action
+-----------------------------------------------------------------------
+Headset                         Look around with tracked head movement.
+Right controller                Aim the equipped weapon/right-hand pistol.
+Left controller, dual wield     Independently aim the left-hand pistol.
+Left stick                      Move forward/backward and strafe.
+Left-stick click                Sprint.
+Right stick left/right          Snap or smooth turn, as selected.
+Right trigger                   Fire the primary/right-hand gun.
+Left trigger, Motion mode       Jump/mantle when not using a grenade or
+                                physical reload; fires the left gun
+                                when dual wielding.
+Left trigger, Buttons mode      Prepare/throw a grenade when free;
+                                with left grip held, still jump/mantle;
+                                when dual wielding, fire the left gun.
+Right stick up                  Jump/mantle in either grenade mode,
+                                except during a physical reload or
+                                while holding a Motion grenade.
+Right B                         Change stance.
+Right stick down                Lower stance.
+Right-stick click               Melee.
+Left X                          Use/interact/pick up; hold when prompted.
+Left Y                          Cycle equipped weapons. A fresh press can
+                                cancel an unfinished manual reload first.
+                                If switching fails, finish any required
+                                pump or empty-chamber charge before firing.
+Right grip                      Toggle an available attached launcher or
+                                other native alternate weapon, and back.
+Left grip near the gun          Support the weapon with the left hand.
+Right A                         Reload using the selected reload mode.
+Left Menu                       Pause/back.
+
+For two-handed aiming, hold left grip with the left hand ahead of the
+right hand. Bring the supported gun up near your head to aim down its
+sights; lower it to stop aiming down sights. Left trigger is not the
+ordinary aim-down-sights button.
+
+When a primary knife is equipped, swing the right controller deliberately
+to attack. Slow down between swings to rearm the gesture. Right trigger
+does not attack with that primary knife; guns keep their normal trigger.
+
+If you keep the firing trigger held through a melee transition, release it
+and press again to resume firing. You do not need to release right grip to
+recover ordinary weapon aiming after that melee.
+
+Dual pistols:
+  Aim each pistol with its own controller. Right trigger fires the right
+  pistol; left trigger fires the left. Do not use the rifle support-hand
+  grip pose to aim the pair. Manual reload still uses one shared sequence
+  for both pistols: right A, left-hand hip pickup and receiver insertion,
+  then any required charging. Independent reloads for each pistol are not
+  required. Automatic/native reload remains available in the launcher.
+
+Magnified weapons use a physical view on the weapon's own optic instead
+of the PC full-screen scope. Hold left grip for support and bring the optic
+to your eye. Sniper optics use 4x and compact optics use 2.5x magnification.
+The surrounding world remains visible. Supported thermal optics, including
+Rebirth's Enfield, show thermal imagery inside the physical lens while the
+surrounding view keeps its normal colors. Variable-zoom optics use fixed 4x;
+see KNOWN-ISSUES.txt.
+
+Right grip alone selects the weapon's available alternate; do not hold Y
+with it. Release and squeeze again to switch back. Weapons without an
+available alternate do nothing. Selection can be blocked while a reload
+or grenade is using the left hand.
+
+MANUAL RELOAD
+
+1. Press right A to begin a reload when the weapon needs ammo and you
+   have suitable reserve ammo.
+2. Move your left hand to your left hip. Press left grip to grab the
+   replacement magazine, belt, round, shell batch or tank.
+3. Move it into the weapon's receiver and release left grip to insert.
+4. If charging is required, hold left trigger at the charging handle,
+   pull it back, then release the trigger.
+
+You can reach the charging handle with the trigger already held, but you
+still need to make the full pull before releasing it. Not every weapon
+needs charging after an insertion.
+
+Pump actions:
+  Use left grip at the pump, pull back, then push forward while keeping
+  the grip held. Keep the hand along the pump's axis. Pump after a shot
+  when the weapon requires it; simply holding the fore-end does not cycle
+  the action.
+
+Tube-fed weapons and internal magazines:
+  Repeat the hip-to-receiver insertion. Press A again, with no round held,
+  to finish a partially loaded tube/chamber. Feeding also finishes when
+  full or out of reserve ammo. Complete any required pump/charge afterward.
+
+Other mechanisms:
+  Break-action weapons follow the game's shell batch size. Launchers and
+  crossbows use their appropriate receiver rather than a universal rifle
+  reload.
+  Supported dual-wield pairs use one physical sequence for both guns.
+  Fuel tanks use an exchange and may discard fuel left in the old tank.
+
+Capacity, reserve ammo and native partial-reload restrictions still
+matter. Firing can remain blocked until a required reload or cycle is
+complete. The guides/hand positions are still being refined, and not every
+weapon variant has been individually checked.
+
+Crossbow:
+  Aim with the right controller and hold left grip for two-hand support.
+  Press A to start the manual reload. Take a bolt from the left hip with
+  left grip, move it to the bow's receiver, and release grip to insert.
+  Hold left trigger at the charging/string area, pull backward about 9 cm,
+  and release to finish cocking. The game retains the bolt's native flight
+  and gravity. Automatic/native reload remains an alternative in the launcher.
+
+  In Executive Order's zipline phase, aim the rope bolt at the marked
+  anchor and press right trigger. The mission intentionally locks movement
+  and rejects firing away from the anchor until that shot starts the zipline.
+
+GRENADES: MOTION MODE (DEFAULT)
+
+Use the left hand and left trigger:
+  Left hip: frag.
+  Right hip: tactical grenade, reached with the left hand.
+
+Release left grip before grabbing. Press the left trigger at the desired
+hip, hold it to retain/cook, then make a throwing motion and release the
+trigger. The native textured grenade is held by the floating left glove;
+recent hand movement determines the throw.
+
+GRENADES: BUTTONS MODE
+
+With left grip released, press the left trigger anywhere for a frag.
+To select a tactical grenade, hold left-stick click before pressing the
+trigger. Hold to retain/cook;
+release to throw toward your headset's viewing direction. You do not
+need to reach a hip or make a throwing motion.
+
+Preparing a button grenade releases the tactical modifier's sprint action
+while the trigger belongs to that grenade.
+
+New button-grenade grabs are blocked during a manual reload, while right
+A or left grip is held, while supporting the weapon, and while dual
+wielding. Release the conflicting control before a fresh grenade press.
+An otherwise valid grenade press with no ammo does not turn into a jump.
+Holding left grip deliberately keeps the ordinary left-trigger jump
+instead of grabbing a grenade. When dual wielding, left trigger continues
+to fire the left gun. Right stick up also jumps in Buttons mode, including
+while holding a button grenade; a physical reload still blocks jumping.
+
+MENUS
+
+Right controller + right trigger Point and click items and sliders in menus
+                               (including sound sliders and Apply/confirm
+                               actions) in VR.
+Left stick up/down              Move through menu items.
+Right A                         Confirm.
+Right B                         Back.
+Left Menu                       Pause/back.
+
+The standard launcher uses right-handed pointer controls.
+Left-stick and A/B controls remain available where they still apply.
+
+SCRIPTED SCENES AND MOUNTED WEAPONS
+
+For use prompts or repeated-tap sequences, use left X. Frozen cinematic
+sections still follow the game's rules; they do not all allow weapon
+control just because a gun appears on screen.
+
+At the final Dragovich grab prompt labeled "press left mouse", release
+right trigger once and press it again. This supplies the scripted attack
+button even when the mission has disabled normal weapons and movement;
+it does not make that cinematic a freely aimed weapon sequence.
+
+At the Vorkuta train-jump Space prompt, press left trigger or push the
+right stick straight up. Left-stick forward is movement, not jump.
+
+Scripted car controls:
+  Left trigger: hold the game's right-mouse/ADS action to reverse.
+  Right trigger: hold the left-mouse/attack action to accelerate.
+  Left X: use/interact.
+
+These mappings apply to the linked scripted context, not every vehicle.
+Analog left-stick movement remains available for linked carry sequences.
+Ordinary turning, weapon cycling, stance and reload actions are not added
+to those weapon-disabled scripted sections.
+
+Admitted mounted weapons:
+  Right trigger: fire.
+  Left X: use/interact where the game permits it.
+  Aim with the right controller; native turret limits still apply.
+  Your headset can look independently. Stick aiming/body turn is suppressed
+  while using supported fixed guns. Native turret aiming limits still apply.
+
+Anti-air and native vehicle weapons:
+  Right trigger: fire the vehicle weapon.
+  Left X: use/interact where the game permits it.
+
+Release the trigger once when entering or leaving a mounted/vehicle weapon.
+This prevents a held trigger from carrying into the new control context.
+
+VORKUTA SLINGSHOT
+
+Rotate the right controller to aim relative to the pose when you take
+control. Hold the left stick down to pull the sling, then release the stick
+to fire. The game's aiming limits and shot trajectory remain active.
+
+VORKUTA MOTORCYCLE AND TRUCK
+
+Motorcycle:
+  Left stick forward/back: drive/reverse.
+  Left stick left/right: steer.
+  Right controller: aim the shotgun.
+  Right trigger: fire the shotgun.
+  Right A: native handbrake.
+  Right grip: native reload command.
+  Left X: interact when prompted.
+
+The motorcycle retains its scripted shotgun animation and reload sequence.
+The drive stick can resume while held after a short tracking interruption;
+release and press the trigger again to resume firing after an interruption.
+
+Truck machine gun:
+  Rotate the right controller to aim within the turret's limits.
+  Right trigger fires; left X interacts where the game permits.
+
+GUIDED MISSILE LAUNCHER
+
+Aim and fire with the right controller and right trigger. Once the missile
+is flying, rotate the controller away from its launch orientation to steer
+up/down and left/right. The right stick is an alternative steering control;
+center it first if it was held during launch.
+
+Release the launch trigger, then press it again for native manual detonation.
+Normal walking and turning controls are suspended during missile guidance.
+The optional boost remains the native keyboard 4 action; no VR boost button
+has been added in this beta.
+
+CRASH SITE BOAT
+
+Left stick                      Forward/reverse and steering.
+Right stick                     Adjust view.
+Right controller direction      Aim both the machine gun and crew rockets.
+Right trigger                   Fire machine gun.
+Left trigger                    Command the crew to fire rockets.
+Left X                          Interact when prompted.
+Left Menu                       Pause.
+
+Headset direction does not aim the boat weapons. Their native pivots,
+limits, projectile paths, crew timing and friendly-fire rules still apply.
+
+WMD AIRCRAFT MONITOR
+
+Right stick                     Move the monitor camera/target.
+Left stick                      Alternative monitor navigation.
+Right A                         Command squad (the game's Space prompt).
+Right B                         Order the squad to dig in when prompted.
+Left trigger                    Zoom in.
+Right trigger                   Zoom out.
+Left X                          Contextual interact/activate.
+Left Menu                       Pause.
+
+Right-stick navigation takes priority if both sticks move. Aim at the
+marked destination before pressing A; the mission rejects orders outside
+its allowed area. Normal on-foot controls return during the ground sections,
+and the monitor layout returns when you are back in the aircraft. Native
+prompts may still show keyboard labels.
+
+HELICOPTER PILOT CONTROLS
+
+Left stick                      Forward/backward flight and strafe.
+Right stick                     Aircraft yaw and pitch/look control.
+Right A                         Ascend.
+Right B                         Descend.
+Right trigger                   Cannon/miniguns.
+Left trigger                    Payback: hold rockets, release to launch.
+                                Redemption: hold for repeated rocket pairs.
+Right grip                      Reload the Payback rocket pods.
+Left X                          Use/interact where the game permits it.
+Headset direction               Aim the cannon/rocket target with the
+                                helicopter reticle.
+
+A and B together cancel the altitude input. Helicopter weapons follow
+the headset target separately from flight steering. The turret still
+has native turning speed and projectile behavior, so it may take a moment
+to catch up. These are pilot controls, not an eject-seat binding or a
+general override for scripted/passenger vehicles.
+
+Redemption's opening approach flies automatically. Sticks and A/B become
+flight controls only when the mission hands over control. Weapons become
+available when the mission enables them. Center the sticks and release
+buttons at that handoff before using them again.
+
+Redemption keeps its native height restriction: A/B do not bypass it.
+Rockets fire in pairs at the mission's roughly one-second interval and
+do not require manual reload. The miniguns can overheat; release the trigger
+and let them cool. The optional PC sight-zoom toggle is not mapped in VR.
+
+
+AIR SUPPORT RADIO
+
+When the mission makes support available, start with the left stick centered,
+hold left Y, then push the left stick left. Release Y and center the stick.
+Aim the right controller at an eligible target and press right trigger to
+confirm. An ordinary Y tap still switches weapons; while support selection
+is available, that tap switches on release. Native cooldown, clear line of
+sight and mission target restrictions apply. At Hue City's final fuel-air-
+bomb call, target the designated tank area, not arbitrary distant infantry.
+
+KHE SANH TRUCK TOW
+
+Aim with the right controller; press right trigger to fire, then release it.
+During flight, turn/tilt the right controller to steer the missile, or use
+the right stick. Guidance ends under the game's normal rules. The green
+scoped presentation remains. The launcher is available again when the
+mission permits it. No additional boost control has been added.
+
+LADDERS AND SWIMMING
+
+Approach a ladder and hold left stick up to climb; center it to stop or
+pull down to descend. Looking around while attached does not redirect you
+away from the ladder. Continue up to get off at the top.
+
+Underwater, hold left stick forward and look where you want to swim:
+look up to rise, down to dive, and sideways to change heading. Pull back
+to swim in the opposite direction; sideways stick movement stays horizontal.
+Swimming follows the headset even with controller-oriented ground movement.
+Turning remains available during the scripted tree/boat approach. Stay
+underwater during the stealth approach; beside the boat, use a deliberate
+right-controller knife swing or right-stick click for the takedown.
+The game's detection and timing requirements still apply.
+
+SCRIPTED MELEE, TUNNEL ESCAPE AND DOORS
+
+Right-stick click supplies the PC V/melee action at scripted prompts,
+including the tunnel rock barriers and Rebirth ladder guard. These prompts
+do not all accept a knife swing.
+
+At the tunnel exit door, briefly hold X. Center and reapply the left stick
+after the transition, push forward to crawl, and click the right stick at
+each dig prompt. The scripted crawl keeps its original animated arms/camera.
+
+For look-sensitive doors, look at the door with the headset and briefly
+hold X. This is separate from controller pointing in menus. Rebirth's
+opening hands/hatchet retain their scripted placement and animations.
+
+REBIRTH BTR GUNNER
+
+Rotate the right controller to aim the turret. Hold right trigger for its
+machine gun/cannon. Use left trigger for the vehicle grenade launcher.
+The mission drives this vehicle automatically.
+
+REBIRTH THERMAL ENFIELD AND STRELA
+
+Thermal optic: hold left grip for support and bring the optic close to an
+eye. Thermal imagery and actor silhouettes appear inside the lens only.
+Lower the weapon, release support or switch weapons to stop using it.
+
+Strela: hold left grip with the support hand ahead of the right hand.
+Point the right controller at an eligible helicopter and hold steady
+until the native lock-on tone/indicator, then press right trigger to fire.
+The rifle's near-head shouldering pose is not required to request lock-on.
+Native target, obstruction and lock timing rules still apply; without a
+valid lock the game can refuse the shot. Reload with the selected mode.
+In manual mode, press A, take ammunition from the left hip with left grip,
+insert it at the receiver and complete any required cycling.
+
+For limitations and useful bug-report details, read KNOWN-ISSUES.txt.

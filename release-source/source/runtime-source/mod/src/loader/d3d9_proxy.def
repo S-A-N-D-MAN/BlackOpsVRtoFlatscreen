@@ -1,0 +1,25 @@
+LIBRARY d3d9
+EXPORTS
+  ProxyOrdinal16=ProxyOrdinal16 @16 NONAME
+  ProxyOrdinal17=ProxyOrdinal17 @17 NONAME
+  ProxyOrdinal18=ProxyOrdinal18 @18 NONAME
+  ProxyOrdinal19=ProxyOrdinal19 @19 NONAME
+  Direct3DCreate9On12=ProxyOrdinal20 @20
+  Direct3DCreate9On12Ex=ProxyOrdinal21 @21
+  ProxyOrdinal22=ProxyOrdinal22 @22 NONAME
+  ProxyOrdinal23=ProxyOrdinal23 @23 NONAME
+  Direct3DShaderValidatorCreate9=ProxyOrdinal24 @24
+  PSGPError=ProxyOrdinal25 @25
+  PSGPSampleTexture=ProxyOrdinal26 @26
+  D3DPERF_BeginEvent=ProxyOrdinal27 @27
+  D3DPERF_EndEvent=ProxyOrdinal28 @28
+  D3DPERF_GetStatus=ProxyOrdinal29 @29
+  D3DPERF_QueryRepeatFrame=ProxyOrdinal30 @30
+  D3DPERF_SetMarker=ProxyOrdinal31 @31
+  D3DPERF_SetOptions=ProxyOrdinal32 @32
+  D3DPERF_SetRegion=ProxyOrdinal33 @33
+  DebugSetLevel=ProxyOrdinal34 @34
+  DebugSetMute=ProxyOrdinal35 @35
+  Direct3D9EnableMaximizedWindowedModeShim=ProxyOrdinal36 @36
+  Direct3DCreate9=_BovrDirect3DCreate9@4 @37
+  Direct3DCreate9Ex=_BovrDirect3DCreate9Ex@8 @38

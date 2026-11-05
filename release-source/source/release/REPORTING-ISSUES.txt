@@ -1,0 +1,48 @@
+BLACK OPS VR 0.1.0-beta.4
+PLAYING, UPDATING AND REPORTING ISSUES
+
+INSTALL / UPDATE
+1. Save your progress and close Black Ops normally.
+2. Extract the complete Patreon Release ZIP to a new folder. Run
+   BlackOpsVR/BlackOpsVR.exe and check the displayed version is beta.3.
+3. Select the same Steam game folder used previously. Keep your existing
+   runtime and preferred controls, then select Install / Update.
+   Choose the rendering-resolution preset too; changes apply through
+   Install / Update, not by changing the selector alone.
+4. Connect your headset and controllers, then select Launch VR. Use this
+   launcher's Install / Update for beta.3; an older launcher can reinstall
+   its older DLL. Read INSTALL.txt for requirements and save locations.
+
+The update preserves the VR saves and control options for that Steam game
+folder, and reapplies the VR rendering settings to its private profile. It does not make a separate campaign copy. Close the game before
+returning to a previous release using that release's Install / Update button.
+The source/ folder contains matching mod/launcher source and is not needed to play.
+
+IF A PROBLEM REMAINS
+Use FEEDBACK-TEMPLATE.txt. Include the exact mission/checkpoint or Zombies
+map, weapon/attachment and selected controls. Explain the actions that caused
+the problem, what happened and what you expected. State whether it recurs
+after a pause, death, weapon switch or Save and Quit/Resume.
+
+For aiming, distinguish a sudden return to a fixed/old direction from a steady
+offset at very close range. Say whether damage, transient puffs/tracers or
+persistent bullet holes appear wrong, and whether one or two hands were used.
+A short headset clip showing the weapon and impacts is useful. For reload
+problems, mention whether the magazine was
+partly used or empty, whether left grip was held, whether charging/pumping
+was still required, and whether a fresh Y press allowed a weapon switch.
+For mounted guns, mention whether mounting, aiming or firing failed.
+For room-scale issues, distinguish stick movement from physical movement,
+and include the nearby wall/slope, stance and any tracking reset. For visual
+or performance reports, include the launcher's rendering preset as well as
+the runtime resolution, refresh rate and reprojection/spacewarp setting.
+
+Open logs in the launcher and share only the relevant session's adapter.log,
+session.json and exit.json if available. For installation/runtime setup
+problems, select Copy compatibility report. Review local paths or other
+personal information before sharing. Do not send a game executable, game
+assets or your whole profile/save folder. Reports are never uploaded automatically.
+
+You do not need to replay the entire campaign or overwrite a useful save just
+to report a bug. The developer has completed the campaign in VR. Every weapon variant and
+headset/runtime combination have not been validated. See KNOWN-ISSUES.txt.

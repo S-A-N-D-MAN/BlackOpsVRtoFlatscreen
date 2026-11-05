@@ -1,0 +1,4 @@
+Complete native source: source/runtime-source.
+Version-only rebuilt launcher and checks: source/release.
+Public packaging tool: source/tools/package_beta4.py.
+See BUILD-SOURCE.md, LICENSE.txt, THIRD-PARTY-NOTICES.txt and licenses/.

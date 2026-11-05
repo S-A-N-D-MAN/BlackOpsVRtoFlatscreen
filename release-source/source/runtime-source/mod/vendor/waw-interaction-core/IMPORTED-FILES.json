@@ -1,0 +1,206 @@
+[
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/LICENSE",
+    "relative_path": "LICENSE",
+    "bytes": 35823,
+    "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/PROVENANCE.md",
+    "relative_path": "PROVENANCE.md",
+    "bytes": 4584,
+    "sha256": "40d763f04a98b57f4796b04c8cf9ff8138ea363008aa4296cd6dd0b701a4acd9"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/THIRD-PARTY-NOTICES.md",
+    "relative_path": "THIRD-PARTY-NOTICES.md",
+    "bytes": 6252,
+    "sha256": "653cffb5dc8a7111e64ef8acc31499ee2fe598aed6c508b5d9d380eeb83ea31d"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/xr/xr_types.h",
+    "relative_path": "src/xr/xr_types.h",
+    "bytes": 6911,
+    "sha256": "87ae00efd317b234298dafde690757be6ed1f2e1e819998015402eded9effce8"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/xr/xr_math.h",
+    "relative_path": "src/xr/xr_math.h",
+    "bytes": 959,
+    "sha256": "37aa546398f84f97b22f564567d54cbc406780e1a3b939479b11e89d227955d3"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/xr/xr_math.cpp",
+    "relative_path": "src/xr/xr_math.cpp",
+    "bytes": 3498,
+    "sha256": "a705e5db5f7244a30d28d0c02477e18f0388ea29c107610abbe04ee500e45e78"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/manual_reload_logic.cpp",
+    "relative_path": "src/gameplay/manual_reload_logic.cpp",
+    "bytes": 8083,
+    "sha256": "58620591d1d2dbcdd2d51245ed81f7a714ae344bbb95aa2c017a6fff85a2d419"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/manual_reload_logic.hpp",
+    "relative_path": "src/gameplay/manual_reload_logic.hpp",
+    "bytes": 3077,
+    "sha256": "2bd3ef6c42c07d3e220a45cde15f406ec464c9c35d2a391b1fe1e8da258a4b11"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/manual_reload_logic_test.cpp",
+    "relative_path": "src/gameplay/manual_reload_logic_test.cpp",
+    "bytes": 21344,
+    "sha256": "daf68c71dfbf677af617097437e0b0dc044a6b88a25af2dbd4c85ce7ca75ef9b"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/tracked_attachment_math.cpp",
+    "relative_path": "src/gameplay/tracked_attachment_math.cpp",
+    "bytes": 5962,
+    "sha256": "c19d597b474561293a3472ff874cb94d9d1a44692db49a49dffca1c6c2de6f91"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/tracked_attachment_math.hpp",
+    "relative_path": "src/gameplay/tracked_attachment_math.hpp",
+    "bytes": 1306,
+    "sha256": "2bed507db14db47062d2bb28692eeb940654994a1e0662d7f1ba23e97642ea4f"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/tracked_attachment_math_test.cpp",
+    "relative_path": "src/gameplay/tracked_attachment_math_test.cpp",
+    "bytes": 7298,
+    "sha256": "188752ec4691e1feb67391ad79bd8e3cff717f04a1d7a9a03c9a731a644ffef9"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/weapon_grip_logic.cpp",
+    "relative_path": "src/mod/weapon_grip_logic.cpp",
+    "bytes": 8917,
+    "sha256": "7a601014133ed36638d9f27cbae99854b0495053e3f3d6ed36ee05930317a892"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/weapon_grip_logic.hpp",
+    "relative_path": "src/mod/weapon_grip_logic.hpp",
+    "bytes": 4601,
+    "sha256": "d8bdf74f771080f4ae30b593ec6efebeeca214f0ae69eab509c4ca109755f7b8"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/weapon_grip_logic_test.cpp",
+    "relative_path": "src/mod/weapon_grip_logic_test.cpp",
+    "bytes": 19200,
+    "sha256": "b0772535e91fc6c0a6b1441c1f7f7add793c127dd6d7fbc4a90dfe4dc39bc3b2"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/current_head_local_controller_pose_logic.cpp",
+    "relative_path": "src/mod/current_head_local_controller_pose_logic.cpp",
+    "bytes": 13663,
+    "sha256": "a2c11c79285ebe4b7884db82ef4e75e489ce5f4279c002cf297181ab756b5c4e"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/current_head_local_controller_pose_logic.hpp",
+    "relative_path": "src/mod/current_head_local_controller_pose_logic.hpp",
+    "bytes": 3394,
+    "sha256": "8e4ef3bfea44a9fbacdda1ab12f833c5709dc20cabd42c8f5cd136569ec4f60a"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/current_head_local_controller_pose_logic_test.cpp",
+    "relative_path": "src/mod/current_head_local_controller_pose_logic_test.cpp",
+    "bytes": 18380,
+    "sha256": "91b0aa6bc50e5a605b2e79d3107f5e8fc3b5255fc61fc3b09db7cefafc7b8399"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic.cpp",
+    "relative_path": "src/mod/head_relative_pose_freeze_logic.cpp",
+    "bytes": 7052,
+    "sha256": "c5a9b48ea6b3163c61e261d8d8cebbeed0862304ffe9291ecf03b061ff532ef1"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic.hpp",
+    "relative_path": "src/mod/head_relative_pose_freeze_logic.hpp",
+    "bytes": 1659,
+    "sha256": "f92c5eafba9375d51c3d249dc357c4dfd7f1722bc667ae1d82e959b95e4cef34"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic_test.cpp",
+    "relative_path": "src/mod/head_relative_pose_freeze_logic_test.cpp",
+    "bytes": 10010,
+    "sha256": "cc829501596f7e66dc5b52ae57289e742a9f27821c211063d6715955102f1153"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/magazine_charging_logic.cpp",
+    "relative_path": "src/mod/magazine_charging_logic.cpp",
+    "bytes": 18926,
+    "sha256": "65c77195c2bd9d750b7b9acdab424eb76dada058ae48a43dce9da4159b98934e"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/magazine_charging_logic.hpp",
+    "relative_path": "src/mod/magazine_charging_logic.hpp",
+    "bytes": 4701,
+    "sha256": "216e590534c921dd693afd1ea61e16b0c5bdd3b07f26f0e77daffdf5272d7cf4"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/magazine_charging_logic_test.cpp",
+    "relative_path": "src/mod/magazine_charging_logic_test.cpp",
+    "bytes": 33545,
+    "sha256": "5ad1ec6239f6a42a4b0bdf5a1e6790c6eb9f84b7f823cdc5c672a76159960065"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/manual_grenade_logic.cpp",
+    "relative_path": "src/mod/manual_grenade_logic.cpp",
+    "bytes": 14429,
+    "sha256": "0c4f994c8f304719576b242cd623ae6d955027e06a9e1103059cf21f4f5b11ba"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/manual_grenade_logic.hpp",
+    "relative_path": "src/mod/manual_grenade_logic.hpp",
+    "bytes": 6364,
+    "sha256": "ee3166c874d5b3686dd17018bba03ecf741e5eb98db906804aebccd2ddd81eec"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/manual_grenade_logic_test.cpp",
+    "relative_path": "src/mod/manual_grenade_logic_test.cpp",
+    "bytes": 22539,
+    "sha256": "217a7f288d6e07196fb96b13ff41828c315f79a67490f04721ea87c8c10ca804"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/button_grenade_logic.cpp",
+    "relative_path": "src/mod/button_grenade_logic.cpp",
+    "bytes": 2240,
+    "sha256": "c49043e05a873639991c2c8d34d4c3efad0c17ec3151f27c25f233551b412912"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/button_grenade_logic.hpp",
+    "relative_path": "src/mod/button_grenade_logic.hpp",
+    "bytes": 1869,
+    "sha256": "1a1effc6195104968143eeac4fa157b3cf0efb3417a7b335c568c8ba28fe4846"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/button_grenade_logic_test.cpp",
+    "relative_path": "src/mod/button_grenade_logic_test.cpp",
+    "bytes": 7431,
+    "sha256": "42b8467c206db25de91d13acf2af94d264fdcba99a47683cb44cbbabd4c19938"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/firing_haptic_logic.cpp",
+    "relative_path": "src/mod/firing_haptic_logic.cpp",
+    "bytes": 3688,
+    "sha256": "ce598c4e440a380c011ffa2520e3352fea990346e04b7399f2669a96ed4446ba"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/firing_haptic_logic.hpp",
+    "relative_path": "src/mod/firing_haptic_logic.hpp",
+    "bytes": 1862,
+    "sha256": "4f16712510ea2bbf3ab42626b301d364d8fa8a3e3cf96816a5583fecbaeeca37"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/firing_haptic_logic_test.cpp",
+    "relative_path": "src/mod/firing_haptic_logic_test.cpp",
+    "bytes": 9274,
+    "sha256": "256ca59b57a23ba55f10cdda78056907c939794cc658366de1e1bf615ba898a6"
+  },
+  {
+    "source_entry": "WorldWarVR-v0.4.0-beta.1-Source/src/gameplay/rigid_submesh_extraction.hpp",
+    "relative_path": "src/gameplay/rigid_submesh_extraction.hpp",
+    "bytes": 7487,
+    "sha256": "9ab85b8d0d4a817944aa932c1657271a7b9297d5fca9b575542a9beccb65ba16"
+  }
+]

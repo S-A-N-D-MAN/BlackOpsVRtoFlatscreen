@@ -1,0 +1,32 @@
+{
+  "archive": "WorldWarVR-beta1-matching-source.zip",
+  "archive_sha256": "bf8ec6110b4759c2c387c489bc8671bcbb137f4d6b14f4f7d454d8abd503046e",
+  "changes": "none; value-only menu panel geometry and tests, no T4 addresses or hooks",
+  "files": [
+    {
+      "archive_member": "WorldWarVR-v0.4.0-beta.1-Source/LICENSE",
+      "path": "LICENSE",
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "archive_member": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/comfort_panel_constants.hpp",
+      "path": "comfort_panel_constants.hpp",
+      "sha256": "78fd38df8e4f2a02f4acc6720bdc62bbb693b1a347f7660b1247d4c63cc5ae7d"
+    },
+    {
+      "archive_member": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/menu_panel_logic_test.cpp",
+      "path": "menu_panel_logic_test.cpp",
+      "sha256": "c86ab0ef11cda2a390b435dfcdbf52649f0bfc869868999032fa95b28cf7b95e"
+    },
+    {
+      "archive_member": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/menu_panel_logic.cpp",
+      "path": "menu_panel_logic.cpp",
+      "sha256": "bfe6f028d7d9de789ef9b4d313a2c140714231054322ab7d57d5d877ff1b408c"
+    },
+    {
+      "archive_member": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/menu_panel_logic.hpp",
+      "path": "menu_panel_logic.hpp",
+      "sha256": "88a64c1c2fd991af9cb601c8eec4a46c9701541c0713be10e5be580a29c87f30"
+    }
+  ]
+}

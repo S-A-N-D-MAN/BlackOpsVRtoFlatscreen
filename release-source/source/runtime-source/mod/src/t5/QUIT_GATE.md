@@ -1,0 +1,17 @@
+# Normal native quit retirement
+
+The installed SP file's aligned command registration at `0x82D042` pushes command storage `0x02487CC0`, callback `0x005DF2B0`, and the `quit` string at `0x009A9C58`, then calls `Cmd_AddCommandInternal` at `0x00661400`. That registration reads all three parameters from the stack and stores the callback at command offset `0x10`. Pinned KisakBlack declares the matching callback as cdecl `void()`, and its `common.cpp:774–803,1868` explains the normal quit/shutdown role.
+
+The actual SP callback at `0x005DF2B0` begins with the five bytes `68 38 BB A3 00` (`push` of the `quitting...` string), invokes native shutdown functions, and tail-jumps to `0x00491A30`. The one relocated instruction contains an absolute immediate, not a PC-relative operand. Its ten-byte trampoline copies that push and jumps back to `entry+5`. The optional hook intercepts before native renderer teardown; it does not hook ExitProcess, DllMain, or a Windows API.
+
+`Cbuf_AddText` is independently identified at `0x0049B930`, cdecl `(int,const char*)`. Its entry pushes critical section `0x35` and calls `Sys_EnterCriticalSection` (`0x005FEA60`); its return paths call the matching leave function (`0x0056D400`). The two critical-section symbols are corroborated by LinkerMod's pinned `components/game_mod/win_common.h:11,14`; `cmd.cpp:47–50` corroborates the Cbuf signature/address. A winning retirement ACK invokes `Cbuf_AddText(0,"quit\n")`, preserving native command-buffer synchronization.
+
+Reproduce the read-only file evidence with `quit_gate_mapping.py`. Output is `../../../phase3/quit-gate-mapping.txt`. Early unaligned candidate-reference windows are search leads; the later explicitly aligned registration/function sections are the mapping proof.
+
+Installation is explicit and must run during serialized startup before concurrent normal quit execution or XR initialization. It requires `BOVR_QUIT_GATE=1`, `BOVR_INSTRUMENT=1`, the complete pinned executable hash/PE headers, expected loaded base, exact quit registration bytes and quit/Cbuf entry bytes. There is no general hot-patch synchronization guarantee.
+
+The callback returns **true** when no live XR/GPU ownership remains, allowing exactly one original native call. It returns **false** to request retirement and defer native teardown. Repeated quit requests remain deferred without re-entering the callback. The render owner completes retirement, then calls `acknowledge_quit_retired_and_queue()`. Exactly one ACK wins. The next native quit executes the original without accessing the retired XR context. If the ACK races the still-running request callback, it returns false and the owner retries after the request has returned.
+
+Default/no callback permits native quit. Removing a callback does not bypass an already pending retirement. Callback exceptions defer teardown. Context unbind is refused while a callback is in flight. This gate concerns normal quit, not all fatal termination paths. Cbuf returns void: a successful wrapper return proves that queueing was invoked, not that a full native command buffer accepted the text; its overflow diagnostics and subsequent quit trace remain the evidence.
+
+CPU tests cover inactive/default pass-through decisions, request reentrancy, repeated defer, callback removal during pending retirement, competing ACKs, exception recovery, and unsupported-host rejection with every opt-in enabled. No native game command is called by those tests. Actual retail shutdown acceptance belongs to the simulator probe.

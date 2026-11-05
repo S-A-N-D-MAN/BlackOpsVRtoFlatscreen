@@ -1,0 +1,22 @@
+Black Ops VR version: 0.1.0-beta.4
+Problem summary:
+Headset and controllers:
+OpenXR runtime and connection (for example, VDXR with Virtual Desktop):
+Mission/checkpoint or Zombies map and round:
+Weapon, attachment/upgrade and dual-wield state:
+Movement / turning / reload / grenade options:
+Launcher rendering preset (Performance / Standard / High):
+Runtime resolution / refresh rate / reprojection or spacewarp setting:
+Exact actions that triggered the problem:
+What happened and what you expected:
+Does it recur after pause, death or Save and Quit/Resume?
+For aiming: sudden fixed/old direction, or a steady close-range offset?
+For aiming: damage, puffs/tracers or persistent holes; one or two hands?
+For reload: partly used/empty, charging/pump needed, and can Y switch weapons?
+For visuals: one eye or both, and which objects/effects are affected?
+For room-scale: physical or stick movement, wall/slope/stance/tracking reset?
+Relevant log filenames or short headset clip attached:
+
+Do not attach game executables, assets or an entire profile/save folder.
+Logs may contain local paths; review them before sharing. Nothing is uploaded
+automatically. Use Copy compatibility report for installation/setup problems.

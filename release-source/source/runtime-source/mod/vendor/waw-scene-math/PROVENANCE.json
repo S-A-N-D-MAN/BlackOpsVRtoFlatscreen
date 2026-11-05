@@ -1,0 +1,73 @@
+{
+  "archive": "WorldWarVR-beta1-matching-source.zip",
+  "archive_sha256": "bf8ec6110b4759c2c387c489bc8671bcbb137f4d6b14f4f7d454d8abd503046e",
+  "scope": "Unmodified engine-independent camera/pose/stereo math only. T4-prefixed internal type names are retained for provenance; no T4 addresses or hooks. Physical scope profile implementation is not imported.",
+  "files": [
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/stereo_scene_math.hpp",
+      "path": "stereo_scene_math.hpp",
+      "sha256": "36ffa8f684749cbb6890c1f9161ff191bba0ee31488e0a0acae2a8333706465b",
+      "bytes": 1668
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/stereo_scene_math.cpp",
+      "path": "stereo_scene_math.cpp",
+      "sha256": "750b974bcdfa319908a9adfee047a09d523a1a3f4ee5185113f6916dbf302c5a",
+      "bytes": 14718
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/stereo_scene_math_test.cpp",
+      "path": "stereo_scene_math_test.cpp",
+      "sha256": "03bc9e5e6bc44600d6a0205788dd5029aadfd561fc0cd0b33077880f25771be7",
+      "bytes": 14483
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/camera_comfort_logic.hpp",
+      "path": "camera_comfort_logic.hpp",
+      "sha256": "d5ead09d00674b08d392158c520599435f6217f41a05ac86feca804636af479a",
+      "bytes": 588
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/camera_comfort_logic.cpp",
+      "path": "camera_comfort_logic.cpp",
+      "sha256": "dd5b87a9f354acd84337afd29dc1d99b42d3bfa801736273c826d2b3a4393d46",
+      "bytes": 1785
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/camera_comfort_logic_test.cpp",
+      "path": "camera_comfort_logic_test.cpp",
+      "sha256": "240539b4bb44d5368943bcfd258405d13b2b4dd4fe4b98e2a87e2d25539762ea",
+      "bytes": 2419
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic.hpp",
+      "path": "head_relative_pose_freeze_logic.hpp",
+      "sha256": "f92c5eafba9375d51c3d249dc357c4dfd7f1722bc667ae1d82e959b95e4cef34",
+      "bytes": 1659
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic.cpp",
+      "path": "head_relative_pose_freeze_logic.cpp",
+      "sha256": "c5a9b48ea6b3163c61e261d8d8cebbeed0862304ffe9291ecf03b061ff532ef1",
+      "bytes": 7052
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/head_relative_pose_freeze_logic_test.cpp",
+      "path": "head_relative_pose_freeze_logic_test.cpp",
+      "sha256": "cc829501596f7e66dc5b52ae57289e742a9f27821c211063d6715955102f1153",
+      "bytes": 10010
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/src/mod/physical_scope_logic.hpp",
+      "path": "physical_scope_logic.hpp",
+      "sha256": "e843556caa66289a4dfdf24fc1e7a88c2004af98768cc57e7634e8f6ff18e201",
+      "bytes": 2715
+    },
+    {
+      "source": "WorldWarVR-v0.4.0-beta.1-Source/LICENSE",
+      "path": "LICENSE",
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+      "bytes": 35823
+    }
+  ]
+}

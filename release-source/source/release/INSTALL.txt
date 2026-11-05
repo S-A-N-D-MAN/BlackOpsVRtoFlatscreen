@@ -1,0 +1,66 @@
+BLACK OPS VR v0.1.0-beta.4 â€” PATREON BETA
+
+The developer completed the full campaign in VR before beta.1 and fixed the
+blockers encountered during that playthrough. Beta.2 adds targeted simulator
+checks and the changes in CHANGELOG.md; it is not a new full playthrough.
+Graphical glitches and animation polish remain. Campaign and Zombies are
+included; read KNOWN-ISSUES.txt for the remaining limits.
+
+This beta updates the existing VR runtime for your selected Steam game folder
+and keeps its VR saves. Close Black Ops normally before installing an update.
+Keep the previous release package if you want to return to it later. Read
+KNOWN-ISSUES.txt for the remaining limits and REPORTING-ISSUES.txt for feedback.
+
+1. Install Call of Duty: Black Ops (2010), single player, through Steam.
+   Start it normally once so Steam can install the game's prerequisites.
+2. Extract the entire Patreon Release ZIP to a new folder. Keep all files
+   and subfolders inside BlackOpsVR together. You do not need
+   to put them in the game folder, install Python, or install .NET separately.
+3. Run BlackOpsVR.exe. Check the detected game folder, or browse to the Steam
+   folder containing BlackOps.exe. Select Check game. A supported Valve-signed
+   single-player build will show in the Status card. Multiplayer is unsupported.
+4. Choose HMD- or Controller-oriented movement, Snap or Smooth turning,
+   Manual or Automatic reload, Motion or Buttons grenades, and a rendering
+   resolution. The defaults are HMD, Snap, Manual, Motion and Standard.
+   Performance is 1280x1440 per eye, Standard is 1920x2160 per eye, and High
+   is 2560x2880 per eye. Higher resolution uses more GPU resources. These
+   internal game sizes are separate from the runtime's headset resolution.
+5. Select Install / Update. First setup copies your existing saves locally
+   and prepares a separate VR runtime. This can take several minutes if game
+   assets need to be copied between drives. Keep the launcher open.
+6. Start Steam and connect your headset and controllers. Your headset software
+   must provide a 32-bit OpenXR runtime. The optional override lets you select
+   its x86 runtime JSON if automatic detection does not find it. SteamVR works
+   when SteamVR is configured as the active OpenXR runtime.
+7. Select Launch VR. Choose Campaign or Zombies from the game's menus.
+   Release the controls briefly after loading, pausing or reconnecting tracking.
+
+SAVE LOCATIONS AND UPDATES
+Steam game files remain unchanged. Your VR setup and saves live under:
+  %LOCALAPPDATA%\BlackOpsVR\runtimes\<game-folder-id>\game\players
+The first setup imports existing saves from the selected game's players folder.
+After that, VR progress is separate; reinstalling/updating does not reimport or
+replace it. Keep using the same game-folder selection to keep the same VR saves.
+Install / Update reapplies the VR rendering settings to the private VR profile.
+Changing the rendering-resolution selection requires Install / Update before
+the next launch. Close the game first; changing the selection alone does not
+update an already installed runtime. No FPS increase is guaranteed.
+If the game offers to apply optimal graphics settings, choose No.
+
+REMOVING THE MOD
+Close the game normally, then select Remove VR setup. This removes the mod
+from its separate runtime and keeps your VR saves for a future reinstall.
+Steam's game and saves are not changed. The retained runtime references game
+assets, so keep the Steam installation available while playing VR.
+
+SUPPORT
+Open controls shows all default and optional controls. Open logs opens local
+session logs. Nothing is uploaded automatically. To report a problem, attach
+the relevant session's adapter.log and describe the map, weapon, controller
+options and what happened. For setup trouble, use Copy compatibility report;
+it includes executable/build identity but no saves. Do not upload your whole
+save/profile folder or a game executable.
+
+Black Ops VR uses OpenXR. COD4 VR's "OpenVR safe controls" option belongs to
+COD4's separate legacy OpenVR fallback and is not an option in this mod. Do not
+select an OpenVR DLL in the OpenXR runtime field.

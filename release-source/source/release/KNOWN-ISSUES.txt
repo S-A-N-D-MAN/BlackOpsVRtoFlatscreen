@@ -1,0 +1,22 @@
+BLACK OPS VR v0.1.0-beta.4 - KNOWN ISSUES
+
+Campaign and Zombies are supported through BlackOps.exe. The developer completed the campaign before beta.1 and fixed encountered progression blockers. This update adds targeted checks, not a fresh full campaign or every-weapon/upgrade test. Multiplayer is unsupported.
+
+- Major tested stereo shadow/glass/water, movement-jitter and foliage/detail-popping problems have fixes included. Some graphical glitches, flicker, scope crops, hand/weapon alignment and grenade/reload polish can remain; not every scene or headset has been verified.
+- Reports of duplicate/displaced bullet marks or effects remain open. Damage alignment and visual decal placement are different observations; the release does not claim every such report is fixed.
+- Some Pimax, SteamVR and wired Quest Link startup/black-screen reports still require the affected user's feedback. A working controller hand alignment is not proof of general startup compatibility. Black Ops needs a compatible 32-bit OpenXR runtime; a 64-bit-only runtime is insufficient. SteamVR may be used as OpenXR. COD4's OpenVR safe-controls preset does not apply here.
+- Beta.4 has a targeted 30-second simulator check near 60.2 successful projection FPS at High internal 2560 x 2880 per eye. The earlier beta.3 benchmark was a separate fixed-scene comparison; the numbers do not establish a controlled improvement between these versions. Headset runtime, refresh rate, reprojection, thermal throttling, settings and other scenes can produce different FPS. Lower the rendering preset if needed; the headset runtime's output resolution is separate.
+- Native chamber, bolt and pump rules still apply. Finish the required charging/pumping action before firing, release buttons after pause/tracking loss, and center sticks before resuming. Report the exact weapon variant/checkpoint if grip or reload becomes stuck.
+- Supported optics use cropped eye images; foreground objects or HUD may enter the lens. Thermal scopes add rendering work. Variable zoom remains fixed. Scripted props and some opening arms/hatchets/crawl sequences remain native mission animations.
+- The game still imposes target restrictions, lock-on, turret/altitude limits, overheat and scripted weapon enabling. Guided-missile boost remains keyboard 4; Redemption's optional PC sight zoom is not mapped. Some PC prompts remain; CONTROLS.txt gives the VR buttons including right-stick click for melee.
+- Independent dual-pistol aiming/firing retains the shared reload sequence. Full left-handed parity and arbitrary in-app rebinding are not provided.
+- Room-scale collision remains bounded by supported native movement/collision behavior. Not every wall, stance, moving surface or headset has been tested.
+- Cached log writes can still block and an abrupt crash can lose the last entries. Public performance changes do not imply that no stall can occur.
+
+INSTALLATION AND PROGRESS
+Use the supported standard ROW Steam single-player game (app 42700/depot 42701). German low-violence depot 42714, modified/regional executables and BlackOpsMP.exe are not verified/supported. Do not rename executables or bypass checks.
+
+Keep all files together in a freshly extracted release folder. Save and close the game before updating. Select the same Steam game folder to keep the same separate VR saves. Saves import on first setup only. Updates preserve those saves but reapply the VR rendering profile. Choose No if offered optimal/reset graphics. Keep older releases as backups rather than mixing files between releases.
+
+REPORTING
+Include beta.4, mission/checkpoint, exact weapon, headset/runtime/GPU, chosen movement/reload/grenade/rendering settings and steps. For visual defects say which eye is affected. Use Open logs and Copy compatibility report; review personal paths before sharing publicly. Never send game executables/assets. See REPORTING-ISSUES.txt.

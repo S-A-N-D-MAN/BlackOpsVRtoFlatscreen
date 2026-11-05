@@ -1,0 +1,152 @@
+[
+  {
+    "path": "release/BUILD-SOURCE.md",
+    "bytes": 2342,
+    "sha256": "d5490071e612fb3daf90bb27a984f3ee4dc250c4b860435aeeed22f1266b30a0"
+  },
+  {
+    "path": "release/CHANGELOG.md",
+    "bytes": 3987,
+    "sha256": "55ae18a5b24f5d34d2140b0b94df0efb88744fad2e7a3bc0e1bc20304385519e"
+  },
+  {
+    "path": "release/CONTROLS.txt",
+    "bytes": 22145,
+    "sha256": "cabf3bb1e770e63081db79328745dab0c168dafdcfcd456f5be2ba08dd4ad166"
+  },
+  {
+    "path": "release/FEEDBACK-TEMPLATE.txt",
+    "bytes": 1236,
+    "sha256": "f560d9aa3b587b5ea05c1fad59297a4d2a2940fc5d1dfe3ddffd25ee56371cfa"
+  },
+  {
+    "path": "release/INSTALL.txt",
+    "bytes": 4229,
+    "sha256": "be5e5db3c1174c10343846e63c49ef18d68673998bff48837d24f31741315587"
+  },
+  {
+    "path": "release/KNOWN-ISSUES.txt",
+    "bytes": 3929,
+    "sha256": "f0c487724b37d1a4a82f66cf1e02eba5c1208073e7a6b5dcc1840e4b2ad1da81"
+  },
+  {
+    "path": "release/launch-smoke-host/BlackOpsVR.LaunchSmokeHost.csproj",
+    "bytes": 350,
+    "sha256": "b2b18b1dd5cc5f3734ffc3ee7c1a41844f991a319c15ff31885b9162948ec8fd"
+  },
+  {
+    "path": "release/launch-smoke-host/Program.cs",
+    "bytes": 2803,
+    "sha256": "dbf2dcb374bde0e871eb05fa13f6101078c85c83353c4735803b2df2fbb346b9"
+  },
+  {
+    "path": "release/launcher/app.manifest",
+    "bytes": 859,
+    "sha256": "83d0fda7b20f6f9fda5e7a41900f0a3a873724b6d6a1b0793da4c2d61927d7d3"
+  },
+  {
+    "path": "release/launcher/App.xaml",
+    "bytes": 209,
+    "sha256": "77cb52a1fc0db38d2eda3350cfbc045b68aac961d7f7964fa79c73aa652e32fe"
+  },
+  {
+    "path": "release/launcher/App.xaml.cs",
+    "bytes": 627,
+    "sha256": "3fb2a926171a3080b6a7b6cc268b874c8e27811a0f853dc0e2de21b22d134ee6"
+  },
+  {
+    "path": "release/launcher/BlackOpsVR.Launcher.csproj",
+    "bytes": 968,
+    "sha256": "ccb2478ce80f7ddf0d7c16746a1bd73be491d54142cb15be1d4a97d26045ad88"
+  },
+  {
+    "path": "release/launcher/Core/BlackOpsVR.Core.csproj",
+    "bytes": 263,
+    "sha256": "8782ffe61c003883fdb7242fda092ed2a07ac660bf72290a6f1241db2422d462"
+  },
+  {
+    "path": "release/launcher/Core/BuildIdentity.cs",
+    "bytes": 232,
+    "sha256": "190b20f2f6d0c49929a1fa8894dfd080680aa9d0f396f547384eaea5d59711e8"
+  },
+  {
+    "path": "release/launcher/Core/GameIdentity.cs",
+    "bytes": 7674,
+    "sha256": "1e3b28b5b519533b5d40875c8e4d56b4ea021335ec2a753963db38967ba20789"
+  },
+  {
+    "path": "release/launcher/Core/Junction.cs",
+    "bytes": 2892,
+    "sha256": "1cd70b3ef4f5f88d44ff867ab9cc8c84d82e4ea8b1acffe5ab26d88170137924"
+  },
+  {
+    "path": "release/launcher/Core/LauncherService.cs",
+    "bytes": 31683,
+    "sha256": "cba247f2c1055dd6bd25442b057388b01c609a0a861483373f6dc476a126c3f1"
+  },
+  {
+    "path": "release/launcher/Core/LauncherSettings.cs",
+    "bytes": 1022,
+    "sha256": "155fc5610b7e0d343cde0965efe33639f78bdc9cf25b96dc2d3d064bb8a6edca"
+  },
+  {
+    "path": "release/launcher/MainWindow.xaml",
+    "bytes": 16647,
+    "sha256": "9de9756463b487f8eec70b424d21ac282568dbee2c93b14baf04cc87bd329b2a"
+  },
+  {
+    "path": "release/launcher/MainWindow.xaml.cs",
+    "bytes": 11498,
+    "sha256": "10ab2344db6b3caaf96f18c0317a2e22f2deb7d7e7735fb7ba75f3785b2dbc60"
+  },
+  {
+    "path": "release/launcher-tests/BlackOpsVR.Launcher.Tests.csproj",
+    "bytes": 350,
+    "sha256": "b2b18b1dd5cc5f3734ffc3ee7c1a41844f991a319c15ff31885b9162948ec8fd"
+  },
+  {
+    "path": "release/launcher-tests/Program.cs",
+    "bytes": 31158,
+    "sha256": "107f7fa8e3ccd309939b88246c0359ebcc9257003d7fe4d86c0623fc443f5bfd"
+  },
+  {
+    "path": "release/package_release.py",
+    "bytes": 8611,
+    "sha256": "2f9428f2e139ce1611f2601f83e2454ce01a86a20cfaa1003a2b7f085a023290"
+  },
+  {
+    "path": "release/payload/config-default.cfg",
+    "bytes": 1594,
+    "sha256": "2c132a2a1a36002fed07341d4a279b6a815e745f67f42c7d7d7f10d3e646d03e"
+  },
+  {
+    "path": "release/payload/manifest.json",
+    "bytes": 267,
+    "sha256": "fa0d2dd511106da383b98635930cae8238ed325dbbd017913022078a8502eeb1"
+  },
+  {
+    "path": "release/payload/runtime-env.json",
+    "bytes": 2679,
+    "sha256": "40ec02c785c02b31f46c989209a1d17bb24e0a531cfcc9f1ab5a83612d775743"
+  },
+  {
+    "path": "release/README.md",
+    "bytes": 3098,
+    "sha256": "b61cdcc6782ab6d3c25bda37dd2c6c38ab98b566a3c440c04eeba7f664d154ee"
+  },
+  {
+    "path": "release/REPORTING-ISSUES.txt",
+    "bytes": 2977,
+    "sha256": "d98987b834a296c58a0620094cd6a9e0be092f56f1c8cc97c5f1c65ccc23795c"
+  },
+  {
+    "path": "release/REQUIREMENTS.txt",
+    "bytes": 2164,
+    "sha256": "bd054159c250998d750f1745d7ec365760ef3e2d37627ddc9624de07e2b71005"
+  },
+  {
+    "path": "tools/package_beta4.py",
+    "bytes": 17459,
+    "sha256": "55da4554d02ef81cbd7e278223e9adec156f7fec8b8b714a72154f1f2cce2f2c"
+  }
+]

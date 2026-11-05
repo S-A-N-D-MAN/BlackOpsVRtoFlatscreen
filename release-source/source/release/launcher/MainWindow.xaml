@@ -1,0 +1,257 @@
+<Window
+    x:Class="BlackOpsVR.Launcher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Black Ops VR"
+    Height="720"
+    Width="960"
+    MinWidth="760"
+    MinHeight="620"
+    WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="HeadingText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#F3F2EE"/>
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <Style x:Key="PanelText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#D7D7D7"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Style x:Key="SectionHeader" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#F26A30"/>
+        </Style>
+
+        <Style x:Key="Card" TargetType="Border">
+            <Setter Property="Background" Value="#262626"/>
+            <Setter Property="BorderBrush" Value="#3A3A3A"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="14"/>
+            <Setter Property="Padding" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,14"/>
+        </Style>
+
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="Background" Value="#F26A30"/>
+            <Setter Property="Foreground" Value="#141414"/>
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="MinHeight" Value="40"/>
+        </Style>
+
+        <Style x:Key="MutedButton" TargetType="Button" BasedOn="{StaticResource PrimaryButton}">
+            <Setter Property="Background" Value="#3E3E3E"/>
+            <Setter Property="Foreground" Value="#EDEDED"/>
+        </Style>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="Foreground" Value="#F3F2EE"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="#F3F2EE"/>
+            <Setter Property="Background" Value="#1E1E1E"/>
+            <Setter Property="BorderBrush" Value="#4A4A4A"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="Footnote" BasedOn="{StaticResource PanelText}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#A9A9A9"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#1A1A1A">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Border Padding="24">
+                <StackPanel x:Name="MainStack" Margin="0,0,0,16">
+                    <TextBlock Text="Black Ops VR" Style="{StaticResource SectionHeader}" Margin="0,0,0,4"/>
+                    <TextBlock Text="Backlog test build" FontSize="28" FontWeight="Bold" FontFamily="Trebuchet MS" Foreground="#F26A30" Margin="0,0,0,2"/>
+                    <TextBlock Text="Set up Black Ops for VR and choose your controls." FontSize="16" Style="{StaticResource PanelText}" Margin="0,0,0,18"/>
+
+                    <Border Style="{StaticResource Card}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="120"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Game folder" FontSize="16" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,8"/>
+                            <TextBox
+                                x:Name="GameFolderTextBox"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                MinHeight="34"
+                                VerticalContentAlignment="Center"
+                                TextWrapping="NoWrap"
+                                Margin="0,0,10,0"/>
+                            <Button
+                                x:Name="BrowseGameFolderButton"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Style="{StaticResource PrimaryButton}"
+                                Content="Browse..."
+                                Click="BrowseGameFolderButton_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <TextBlock Text="VR input: OpenXR" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,8"/>
+                            <TextBlock Text="SteamVR is supported when SteamVR is set as the active 32-bit OpenXR runtime. COD4 VR’s ‘OpenVR safe controls’ preset belongs to COD4’s legacy OpenVR fallback and is not used by Black Ops VR." Style="{StaticResource PanelText}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Style="{StaticResource Card}" Grid.Column="0" Margin="0,0,8,14">
+                            <StackPanel>
+                                <TextBlock Text="Turn mode" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,10"/>
+                                <RadioButton x:Name="TurnSnapRadioButton" Content="Snap (45 degrees)" IsChecked="True"/>
+                                <TextBlock Text="Turn in fixed steps with the right stick." Style="{StaticResource Footnote}"/>
+                                <RadioButton x:Name="TurnSmoothRadioButton" Content="Smooth (90 degrees per second)" Margin="0,12,0,0"/>
+                                <TextBlock Text="Turn continuously with the right stick." Style="{StaticResource Footnote}"/>
+                            </StackPanel>
+                        </Border>
+
+                    <Border Style="{StaticResource Card}" Grid.Column="1" Margin="8,0,0,14">
+                            <StackPanel>
+                                <TextBlock Text="Reload mode" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,10"/>
+                                <RadioButton x:Name="ReloadManualRadioButton" Content="Manual" IsChecked="True"/>
+                                <TextBlock Text="Replace magazines and operate the weapon by hand." Style="{StaticResource Footnote}"/>
+                                <RadioButton x:Name="ReloadAutomaticRadioButton" Content="Automatic (press A to reload)" Margin="0,12,0,0"/>
+                                <TextBlock Text="Use the game’s normal reload animation. Press A to reload." Style="{StaticResource Footnote}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <TextBlock Text="Movement orientation" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,10"/>
+                            <RadioButton x:Name="MovementHmdRadioButton" Content="HMD oriented" IsChecked="True"/>
+                            <TextBlock Text="Pushing the movement stick forward moves where your headset is facing." Style="{StaticResource Footnote}"/>
+                            <RadioButton x:Name="MovementControllerRadioButton" Content="Controller oriented" Margin="0,12,0,0"/>
+                            <TextBlock Text="Pushing the movement stick forward moves where your movement-hand controller is pointing." Style="{StaticResource Footnote}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <TextBlock Text="Grenade mode" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,10"/>
+                                <RadioButton x:Name="GrenadeMotionRadioButton" Content="Motion" IsChecked="True"/>
+                                <TextBlock Text="Grab a grenade at your hip, then throw with your left hand." Style="{StaticResource Footnote}" Margin="0,0,0,8"/>
+                                <RadioButton x:Name="GrenadeButtonsRadioButton" Content="Buttons"/>
+                                <TextBlock Text="Hold/release left trigger to throw. Hold left-stick click first for a tactical grenade." Style="{StaticResource Footnote}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Style="{StaticResource Card}">
+                        <StackPanel>
+                            <TextBlock Text="Rendering resolution" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,10"/>
+                            <RadioButton x:Name="ResolutionPerformanceRadioButton" Content="Performance — 1280 × 1440 per eye"/>
+                            <RadioButton x:Name="ResolutionStandardRadioButton" Content="Standard — 1920 × 2160 per eye" IsChecked="True"/>
+                            <RadioButton x:Name="ResolutionHighRadioButton" Content="High — 2560 × 2880 per eye"/>
+                            <TextBlock Text="Higher resolution adds detail and uses more GPU memory. Select Install / Update after changing this option, then launch the game." Style="{StaticResource Footnote}"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Expander x:Name="AdvancedExpander" Header="32-bit OpenXR runtime override (optional)"
+                              IsExpanded="False"
+                              Foreground="#F3F2EE">
+                        <StackPanel>
+                            <Border Style="{StaticResource Card}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="120"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Grid.ColumnSpan="2"
+                                        Text="32-bit OpenXR runtime JSON (leave blank for auto-detect)"
+                                        FontSize="16"
+                                        FontFamily="Trebuchet MS"
+                                        FontWeight="Bold"
+                                        Foreground="#F26A30"
+                                        Margin="0,0,0,8"/>
+                                    <TextBox
+                                        x:Name="RuntimeJsonTextBox"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        MinHeight="34"
+                                        VerticalContentAlignment="Center"
+                                        Margin="0,0,10,0"
+                                        TextWrapping="NoWrap"/>
+                                    <Button
+                                        x:Name="BrowseRuntimeJsonButton"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Style="{StaticResource MutedButton}"
+                                        Content="Browse..."
+                                        Click="BrowseRuntimeJsonButton_Click"/>
+                                    <TextBlock
+                                        Grid.Row="2"
+                                        Grid.ColumnSpan="2"
+                                        Text="Leave blank to use the active 32-bit OpenXR runtime. SteamVR users should set SteamVR as the active OpenXR runtime; do not select an OpenVR driver or DLL here."
+                                        Style="{StaticResource Footnote}"
+                                        Margin="0,10,0,0"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Expander>
+
+                    <WrapPanel Orientation="Horizontal" ItemWidth="220" Margin="0,16,0,14">
+                        <Button x:Name="InstallUpdateButton" Style="{StaticResource PrimaryButton}" Width="200" Content="Install / Update" Click="InstallUpdateButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="LaunchVrButton" Style="{StaticResource PrimaryButton}" Width="200" Content="Launch VR" Click="LaunchVrButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="RestoreButton" Style="{StaticResource PrimaryButton}" Width="200" Content="Remove VR setup" Click="RestoreButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="CheckGameButton" Style="{StaticResource MutedButton}" Width="200" Content="Check game" Click="CheckGameButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="CopyReportButton" Style="{StaticResource MutedButton}" Width="200" Content="Copy compatibility report" Click="CopyReportButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="OpenControlsButton" Style="{StaticResource MutedButton}" Width="200" Content="Open controls" Click="OpenControlsButton_Click" Margin="0,0,10,10"/>
+                        <Button x:Name="OpenLogsButton" Style="{StaticResource MutedButton}" Width="200" Content="Open logs" Click="OpenLogsButton_Click" Margin="0,0,10,10"/>
+                    </WrapPanel>
+                    <TextBlock
+                        Text="Setup behavior: Steam game files stay unchanged. VR saves are kept separately in your local app-data folder."
+                        Style="{StaticResource Footnote}"
+                        TextWrapping="Wrap"
+                        Margin="0,-2,0,8"/>
+
+                    <Border Style="{StaticResource Card}" x:Name="StatusCard">
+                        <StackPanel>
+                            <TextBlock Text="Status" FontSize="18" FontFamily="Trebuchet MS" FontWeight="Bold" Foreground="#F26A30" Margin="0,0,0,8"/>
+                            <TextBlock x:Name="StatusTextBlock" Text="Ready." Style="{StaticResource PanelText}" MinHeight="40"/>
+                            <ProgressBar x:Name="BusyProgress" Height="4" IsIndeterminate="True" Visibility="Collapsed" Margin="0,8,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Window>

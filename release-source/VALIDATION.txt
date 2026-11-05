@@ -1,0 +1,10 @@
+BLACK OPS VR 0.1.0-beta.4
+
+178 native tests passed first attempt; no retry used.
+139 fresh beta.4 launcher checks, zero failures; one unavailable MP identity fixture.
+Exact accepted native runtime and complete matching source retained.
+River-checkpoint review:36 recorded stereo pairs.
+Targeted High-resolution simulator check:60.2378 successful projection FPS over30.031seconds,1809frames,no empty/reused/failed-end frames.
+Optional transport CPU-stage costs unavailable because that diagnostic was disabled.
+Newest foliage changes are simulator-validated; no fresh physical-headset acceptance, full campaign playthrough, all-weapon or all-scene FPS guarantee.
+BUILD-INFO.json binds artifacts and validation scope.

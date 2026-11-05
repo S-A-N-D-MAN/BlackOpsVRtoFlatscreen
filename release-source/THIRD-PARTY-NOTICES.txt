@@ -1,0 +1,11 @@
+Black Ops VR 0.1.0-beta.4
+
+First-party mod and launcher source: GPL-3.0-only.
+Includes adapted World War VR components and retained original notices,
+OpenXR SDK/loader and JsonCpp under their supplied terms. Microsoft .NET
+8.0.31 and Windows Desktop runtime licenses are supplied in licenses/.
+These are ordinary adjacent runtime files; no bundled runtime extraction
+occurs. createdump.exe is the unchanged Microsoft crash-dump utility.
+No game executable, game asset, personal profile, save or log is included.
+Call of Duty and Black Ops belong to their respective owners. This is an
+unofficial community mod, unaffiliated with Activision or Treyarch.

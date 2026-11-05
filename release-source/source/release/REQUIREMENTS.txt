@@ -1,0 +1,33 @@
+BLACK OPS VR v0.1.0-beta.4
+
+- A legitimate Steam installation of Call of Duty: Black Ops (2010), with the
+  single-player executable and the game assets for the maps you want to play.
+  Run the unmodified game once to complete Steam's DirectX prerequisites.
+- This beta is designed to accept Valve-signed per-account Steam copies of the tested standard
+  international (ROW) Windows x86 single-player build: Steam App 42700, depot
+  42701. It verifies the Black Ops PE layout, signature and Steam build/depot
+  identity instead of requiring one player's whole-file hash.
+  Modified executables, other builds and renamed BlackOpsMP.exe are refused.
+  No replacement game executable or game assets are supplied.
+- 64-bit Windows 10 or Windows 11, with a VR-capable DirectX 11 graphics card.
+- A connected PC VR headset and two tracked controllers, with an installed
+  32-bit (x86) OpenXR runtime. A 64-bit-only runtime is not sufficient for
+  this 32-bit game. Touch-style A/B/X/Y controls are used in the guide.
+- Steam running and signed in to the account that owns the game.
+- A local Windows drive for the Steam game and the separate VR setup.
+  Existing assets are linked where possible. Across drives, some assets are
+  copied; allow several additional GB plus space for VR saves and logs.
+
+The launcher includes its .NET runtime. No Python, development tools,
+OpenXR Simulator, or separate mod action-manifest download is needed to play.
+This beta targets Campaign and Zombies through BlackOps.exe. Competitive
+multiplayer through BlackOpsMP.exe is not supported by this release.
+The separate German low-violence single-player depot 42714 is not yet verified
+or supported. If that is the version Steam installed, use Copy compatibility
+report and send the report so its executable and layout can be tested safely.
+
+SteamVR is supported as an OpenXR runtime. Set SteamVR as the active 32-bit
+OpenXR runtime; COD4 VR's legacy "OpenVR safe controls" preset does not apply.
+
+Headset and controller compatibility beyond the tested setup is not certified.
+This is a beta release, with the limitations described in KNOWN-ISSUES.txt.
