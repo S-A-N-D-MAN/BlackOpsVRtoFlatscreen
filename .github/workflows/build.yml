@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     defaults:
       run:
         working-directory: release-source/source
