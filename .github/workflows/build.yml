@@ -1,0 +1,46 @@
+name: Build BlackOpsVR
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: release-source/source
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build native DLL (32-bit)
+        shell: pwsh
+        run: |
+          cmake -S runtime-source/mod -B native-build -G "Visual Studio 17 2022" -A Win32
+          cmake --build native-build --config Release --target bovr_proxy --parallel 4
+
+      - name: Build launcher
+        shell: pwsh
+        run: dotnet publish release/launcher/BlackOpsVR.Launcher.csproj -c Release -r win-x64 --self-contained true -o launcher-build
+
+      - name: Assemble portable package
+        shell: pwsh
+        run: |
+          $dll = Get-ChildItem native-build -Recurse -Filter d3d9.dll | Where-Object { $_.FullName -match 'Release' } | Select-Object -First 1
+          if (-not $dll) { throw "d3d9.dll was not built" }
+          $p = "launcher-build/payload"
+          New-Item $p -ItemType Directory -Force | Out-Null
+          Copy-Item $dll.FullName "$p/d3d9.dll"
+          Copy-Item release/payload/runtime-env.json, release/payload/config-default.cfg $p
+          $m = [ordered]@{}
+          foreach ($n in "d3d9.dll","runtime-env.json","config-default.cfg") {
+            $m[$n] = (Get-FileHash "$p/$n" -Algorithm SHA256).Hash.ToLower()
+          }
+          ($m | ConvertTo-Json) | Set-Content "$p/manifest.json" -Encoding utf8NoBOM
+          Get-Content "$p/manifest.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BlackOpsVR-patched
+          path: release-source/source/launcher-build
